@@ -5,6 +5,27 @@
     display: flex;
     margin-right: auto;
     margin-left: auto;
+    flex-wrap: wrap;
+}
+
+.l-section {
+    margin-bottom: 2rem;
+    @include from(l) {
+        margin-bottom: 4rem;
+    }
+
+    &--diagonal {
+        position: relative;
+        &:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #F0F0F0;
+            z-index: var(--z-back);
+            transform: skewY(-5deg) scaleY(1.1);
+        }
+    }
 }
 
 // anchos personalizados
